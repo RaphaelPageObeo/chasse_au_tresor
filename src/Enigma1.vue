@@ -1,7 +1,7 @@
 <template>
-    <div>
-        Lien de Parenté
-    </div>
+    <h2>
+        Enigme 1 : Lien de Parenté
+    </h2>
     <div>
         Vous vous dites ceci : <br>
         "Je suis un homme. Si le fils de cet autre homme est le père de mon fils, quel est le lien de parenté entre cet homme et moi?"

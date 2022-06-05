@@ -1,11 +1,9 @@
 <template>
-  <div>
-    <label for="name">Numéro de l'énigme:</label>
-  </div>
+  <h2>
+    <label for="name">Numéro de l'énigme :</label>
+  </h2>
   <div>
     <input type="text" v-model="enigmeInput">
-  </div>
-  <div>
     <button @click="displayEnigma">Valider</button>
   </div>
   <div v-if="msg != '' ">
@@ -14,10 +12,14 @@
   <div v-if="enigmaToDisplay == '1'">
     <Enigma1 />
   </div>
+  <div v-if="enigmaToDisplay == '7'">
+    <Enigma7 />
+  </div>
   
 </template>
 <script>
 import Enigma1 from './Enigma1'
+import Enigma7 from './Enigma7'
 
 export default {
   name: 'App',
@@ -25,7 +27,7 @@ export default {
     return {
       msg:'',
       enigmeInput:'',
-      authorizedEnigmas:['1'],
+      authorizedEnigmas:['1','7'],
       enigmaToDisplay:''
     }
   },
@@ -41,7 +43,8 @@ export default {
     }
   },
   components : {
-    Enigma1
+    Enigma1,
+    Enigma7
   }
 }
 </script>
