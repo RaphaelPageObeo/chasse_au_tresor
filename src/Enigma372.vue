@@ -8,7 +8,7 @@
     <div>
         <b>Dans cette phrase, le 'r' est présent </b>
         <input type="text" v-model="value">
-        <b>  fois.</b>
+        <b> fois.</b>
     </div>
   <div>
   </div>
@@ -28,7 +28,7 @@ export default {
     },
     methods:{
         validateAnswer(){
-            if(this.value.toLowerCase() == 'quatre') {
+            if(this.value.trim().toLowerCase() == 'quatre') {
                 this.msg = 'Bonne réponse!'
             } else {
                 this.msg = 'Mauvaise réponse :('
