@@ -21,6 +21,9 @@
   <div v-if="enigmaToDisplay == '800'">
     <Enigma800 />
   </div>
+  <div v-if="enigmaToDisplay == '190'">
+    <Enigma190 />
+  </div>
   
 </template>
 <script>
@@ -28,6 +31,7 @@ import Enigma1 from './Enigma1'
 import Enigma7 from './Enigma7'
 import Enigma372 from './Enigma372'
 import Enigma800 from './Enigma800'
+import Enigma104 from './Enigma104'
 
 export default {
   name: 'App',
@@ -35,7 +39,7 @@ export default {
     return {
       msg:'',
       enigmeInput:'',
-      authorizedEnigmas:['1','7','372', '800'],
+      authorizedEnigmas:['1','7','372', '800', '104'],
       enigmaToDisplay:''
     }
   },
@@ -54,7 +58,8 @@ export default {
     Enigma1,
     Enigma7,
     Enigma372,
-    Enigma800
+    Enigma800,
+    Enigma104
   }
 }
 </script>
