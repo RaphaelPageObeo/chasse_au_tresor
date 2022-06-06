@@ -36,7 +36,7 @@ export default {
     methods:{
         validateAnswer(){
             if(this.value == 'père') {
-                this.msg = 'Bonne réponse!'
+                this.msg = "Bonne réponse! Le père de mon fils = moi. Donc la phrase devient : << Si le fils de cet homme c'est moi, quel est le lien de parenté entre cet homme et moi? >>."
             } else {
                 this.msg = 'Mauvaise réponse :('
             }
