@@ -92,7 +92,42 @@
     answerString = "plus de peur que de mal"
     answerText = "Bonne réponse!"/>
   </div>
-  
+  <div v-if="enigmaToDisplay == '172'">    
+    <GenericEnigma enigma-type = "select"
+      enigma-title="Enigme 172 : Quel jour?" 
+      enigma-text = "Si nous ne sommes pas le lendemain de lundi ou le jour avant jeudi, que demain n'est pas dimanche, 
+      que ce n'était pas dimanche hier et que le jour d'après demain n'est pas samedi, et que le jour avant hier n'était pas mercredi..."
+      widget-prefix = "Quel jour sommes-nous?"
+      :select-options = "[
+        {id: 'lundi', label: 'Lundi'},
+        {id: 'mardi', label: 'Mardi'},
+        {id: 'mercredi', label: 'Mercredi'},
+        {id: 'jeudi', label: 'Jeudi'},
+        {id: 'vendredi', label: 'Vendredi'},
+        {id: 'samedi', label: 'Samedi'},
+        {id: 'dimanche', label: 'Dimanche'},
+      ]"
+      answerString = "dimanche"
+      answerText = "Bonne réponse!"/>
+  </div>
+  <div v-if="enigmaToDisplay == '210'">
+    <GenericEnigma enigma-type = "image"
+    enigma-title="Enigme 210 : Lettre en Rébus 2" 
+    img-src = "Enigma210.jpg"
+    widget-prefix = "Quelle expression se cache derrière ce dessin?"
+    answerString = "mettre les petits plats dans les grands"
+    answerText = "Bonne réponse!"/>
+  </div>
+  <div v-if="enigmaToDisplay == '750'">
+    <GenericEnigma enigma-type = "image"
+    enigma-title="Enigme 750 : Cour d'honneur" 
+    img-src = "Enigma750.jpg"
+    enigma-text = "Cette figure représente le pavage d'une cour d'honneur."
+    widget-prefix = "Combien comporte-t-elle de carrés au total? (en chiffre)"
+    answerString = "30"
+    answerText = "Bonne réponse! 
+    Seize de taille 1x1 ; neuf de taille 2x2 ; quatre de taille 3x3 ; un de taille 4x4"/>
+  </div>
 </template>
 <script>
 import GenericEnigma from './GenericEnigma.vue'
@@ -103,7 +138,7 @@ export default {
     return {
       msg:'',
       enigmeInput:'',
-      authorizedEnigmas:['1','7','372', '800','104', '13'],
+      authorizedEnigmas:['1','7','372', '800','104', '13', '172', '210', '750'],
       enigmaToDisplay:''
     }
   },
