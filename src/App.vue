@@ -128,6 +128,15 @@
     answerText = "Bonne réponse! 
     Seize de taille 1x1 ; neuf de taille 2x2 ; quatre de taille 3x3 ; un de taille 4x4"/>
   </div>
+  <div v-if="enigmaToDisplay == '143'">
+    <GenericEnigma enigma-type = "text"
+    enigma-title="Enigme 143 : Escargot grimpeur" 
+    enigma-text = "Un escargot veut grimper au sommet d'un mur de 10 m de haut. 
+    Mais il se déplace d'une façon très particulière : pendant la journée, il monte de 3 m et, durant la nuit, il redescend de 2 m."
+    widget-prefix = "S'il commence son ascension un matin, combien de jours lui faudra-t-il pour accéder au sommet de ce mur? (en chiffres)"
+    answerString = "8"
+    answerText = "Bonne réponse!"/>
+  </div>
 </template>
 <script>
 import GenericEnigma from './GenericEnigma.vue'
@@ -138,7 +147,7 @@ export default {
     return {
       msg:'',
       enigmeInput:'',
-      authorizedEnigmas:['1','7','372', '800','104', '13', '172', '210', '750'],
+      authorizedEnigmas:['1','7','372', '800','104', '13', '172', '210', '750', '143'],
       enigmaToDisplay:''
     }
   },
