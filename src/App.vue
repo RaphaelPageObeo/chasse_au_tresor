@@ -10,10 +10,26 @@
     {{msg}}
   </div>
   <div v-if="enigmaToDisplay == '1'">
-    <Enigma1 />
+    <GenericEnigma enigma-type = "select"
+    enigma-title="Enigme 1 : Lien de Parenté" 
+    enigma-text = "Vous vous dites ceci : 'Je suis un homme. Si le fils de cet autre homme est le père de mon fils, quel est le lien de parenté entre cet homme et moi?'"
+    widget-prefix = "Cet homme est mon ... :"
+    :select-options = "[
+      {id: 'frère', label: 'Frère'},
+      {id: 'père', label: 'Père'},
+      {id: 'fils', label: 'Fils'},
+      {id: 'grand-père', label: 'Grand Père'},
+      {id: 'petit-fils', label: 'Petit Fils'},
+      {id: 'oncle', label: 'Oncle'},
+      {id: 'neveu', label: 'Neveu'},
+    ]"
+    answerString = "père"
+    answerText = "Bonne réponse!
+    Le père de mon fils = moi. Donc la phrase devient : ' Si le fils de cet homme c'est moi, quel est le lien de parenté entre cet homme et moi? '."/>
   </div>
   <div v-if="enigmaToDisplay == '7'">
-    <TextEnigma enigma-title="Enigme 7 : Suite Logique" 
+    <GenericEnigma enigma-type = "text"
+    enigma-title="Enigme 7 : Suite Logique" 
     enigma-text = "Quelle est la prochaine lettre de cette suite logique : "
     widget-prefix = "U D T Q C S S ..."
     answerString = "h"
@@ -21,7 +37,8 @@
     Les termes de cette suite correspondent aux initiales des chiffres : << Un, Deux, Trois, Quatre, Cinq, Six, Sept ... >> "/>
   </div>
   <div v-if="enigmaToDisplay == '372'">
-    <TextEnigma enigma-title="Enigme 372 : En manque d'air" 
+    <GenericEnigma enigma-type = "text"
+    enigma-title="Enigme 372 : En manque d'air" 
     enigma-text = "Écrivez en toute lettre le chiffre manquant tout en conservant la cohérence de la phrase :"
     widget-prefix = "Dans cette phrase, le 'r' est présent "
     widget-suffix = "fois."
@@ -29,26 +46,56 @@
     answerText = "Bonne réponse!
     Trois ne peut pas convenir, car il contient un R. Quatre convient alors."/>
   </div>
-  <div v-if="enigmaToDisplay == '800'">
-    <Enigma800 />
+  <div v-if="enigmaToDisplay == '800'">    
+  <GenericEnigma enigma-type = "select"
+    enigma-title="Enigme 800 : Mot de passe" 
+    enigma-text = "Un légat du pape souhaite assister à une réunion secrète tenue par les chevaliers cathares. Pour être admis, il doit donner le mot de passe au garde à l'entrée. Il se cache et écoute les personnes qui se présentent. <br>
+        Un homme arrive.<br>
+        Le garde lui dit : 'Cinq', l'homme répond 'Quatre'. Le garde le laisse entrer.<br>
+        Un deuxième se présente. <br>
+        Le garde lui dit : 'Six', il répond : 'Trois' et passe.<br>
+        Un dernier paraît.<br>
+        Le garde lui dit : 'Quatre', il répond 'Six' et entre.<br>
+        Arrive le tour du légat du pape.<br>
+        Le garde lui dit : 'Sept'."
+    widget-prefix = "Que doit-il répondre pour pouvoir entrer?"
+    :select-options = "[
+      {id: '0', label: 'Zéro'},
+      {id: '1', label: 'Un'},
+      {id: '2', label: 'Deux'},
+      {id: '3', label: 'Trois'},
+      {id: '4', label: 'Quatre'},
+      {id: '5', label: 'Cinq'},
+      {id: '6', label: 'Six'},
+      {id: '7', label: 'Sept'},
+      {id: '8', label: 'Huit'},
+      {id: '9', label: 'Neuf'},
+      {id: '10', label: 'Dix'},
+    ]"
+    answerString = "4"
+    answerText = "Bonne réponse!
+    'Quatre' correspond au nombre de lettres du chiffre prononcé par le garde."/>
   </div>
   <div v-if="enigmaToDisplay == '104'">
-    <TextEnigma enigma-title="Enigme 104 : Oeufs de Poules" 
+    <GenericEnigma enigma-type = "text"
+    enigma-title="Enigme 104 : Oeufs de Poules" 
     enigma-text = "Huit cents poules pondent en moyenne huit cents oeufs en huit jours."
     widget-prefix = "Combien d'oeufs pondent quatre cents poules en quatre jours? (en chiffres)"
     answerString = "200"
     answerText = "Bonne réponse! En effet, quatre cents poules pondent quatre cents oeufs en huit jours. Donc quatre cents poules pondent deux cents oeufs en quatre jours."/>
   </div>
   <div v-if="enigmaToDisplay == '13'">
-    <Enigma13 />
+    <GenericEnigma enigma-type = "image"
+    enigma-title="Enigme 13 : Lettre en Rébus" 
+    img-src = "Enigma13.jpg"
+    widget-prefix = "Quelle expression se cache derrière ce dessin?"
+    answerString = "plus de peur que de mal"
+    answerText = "Bonne réponse!"/>
   </div>
   
 </template>
 <script>
-import Enigma1 from './Enigma1'
-import Enigma800 from './Enigma800'
-import Enigma13 from './Enigma13'
-import TextEnigma from './TextEnigma.vue'
+import GenericEnigma from './GenericEnigma.vue'
 
 export default {
   name: 'App',
@@ -72,10 +119,7 @@ export default {
     }
   },
   components : {
-    Enigma1,
-    Enigma800,
-    Enigma13,
-    TextEnigma
+    GenericEnigma
 }
 }
 </script>

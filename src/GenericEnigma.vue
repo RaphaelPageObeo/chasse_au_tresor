@@ -2,18 +2,27 @@
     <h2>
         {{enigmaTitle}}
     </h2>
-    <div>
-        {{enigmaText}}
-    </div>
+    <div v-html="enigmaText"></div>
+    <img v-if="enigmaType =='image'" :src="require(`@/assets/${imgSrc}`)">
     <div>
         <b>{{widgetPrefix}}</b>
-        <div>
-            <input type="text" v-model="value" id="answer" name="answer">
+        <div v-if="enigmaType == 'text' || enigmaType =='image'">
+            <input type="text" v-model="value">
+        </div>
+        <div v-if="enigmaType == 'select'">
+            <select v-model="value">
+                <option 
+                v-for="option in selectOptions" 
+                v-bind:value="option.id" 
+                :key="option.id">
+                    {{ option.label }}
+                </option>
+            </select> 
         </div>
         <b>{{widgetSuffix}}</b>
     </div>
-  <div>
-  </div>
+    <div>
+    </div>
     <div>
         <button @click="validateAnswer">Valider</button>
     </div>
@@ -23,12 +32,15 @@
 export default {
     name : 'app-textEnigma',
     props : {
+        imgSrc: String,
+        enigmaType: String,
         enigmaTitle: String,
         enigmaText: String,
         widgetPrefix: String,
         widgetSuffix: String,
         answerString: String,
-        answerText: String
+        answerText: String,
+        selectOptions: []
     },
     data() {
         return {
