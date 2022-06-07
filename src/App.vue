@@ -13,16 +13,31 @@
     <Enigma1 />
   </div>
   <div v-if="enigmaToDisplay == '7'">
-    <Enigma7 />
+    <TextEnigma enigma-title="Enigme 7 : Suite Logique" 
+    enigma-text = "Quelle est la prochaine lettre de cette suite logique : "
+    widget-prefix = "U D T Q C S S ..."
+    answerString = "h"
+    answerText = "Bonne réponse!
+    Les termes de cette suite correspondent aux initiales des chiffres : << Un, Deux, Trois, Quatre, Cinq, Six, Sept ... >> "/>
   </div>
   <div v-if="enigmaToDisplay == '372'">
-    <Enigma372 />
+    <TextEnigma enigma-title="Enigme 372 : En manque d'air" 
+    enigma-text = "Écrivez en toute lettre le chiffre manquant tout en conservant la cohérence de la phrase :"
+    widget-prefix = "Dans cette phrase, le 'r' est présent "
+    widget-suffix = "fois."
+    answerString = "quatre"
+    answerText = "Bonne réponse!
+    Trois ne peut pas convenir, car il contient un R. Quatre convient alors."/>
   </div>
   <div v-if="enigmaToDisplay == '800'">
     <Enigma800 />
   </div>
   <div v-if="enigmaToDisplay == '104'">
-    <Enigma104 />
+    <TextEnigma enigma-title="Enigme 104 : Oeufs de Poules" 
+    enigma-text = "Huit cents poules pondent en moyenne huit cents oeufs en huit jours."
+    widget-prefix = "Combien d'oeufs pondent quatre cents poules en quatre jours? (en chiffres)"
+    answerString = "200"
+    answerText = "Bonne réponse! En effet, quatre cents poules pondent quatre cents oeufs en huit jours. Donc quatre cents poules pondent deux cents oeufs en quatre jours."/>
   </div>
   <div v-if="enigmaToDisplay == '13'">
     <Enigma13 />
@@ -31,11 +46,9 @@
 </template>
 <script>
 import Enigma1 from './Enigma1'
-import Enigma7 from './Enigma7'
-import Enigma372 from './Enigma372'
 import Enigma800 from './Enigma800'
-import Enigma104 from './Enigma104'
 import Enigma13 from './Enigma13'
+import TextEnigma from './TextEnigma.vue'
 
 export default {
   name: 'App',
@@ -60,11 +73,9 @@ export default {
   },
   components : {
     Enigma1,
-    Enigma7,
-    Enigma372,
     Enigma800,
-    Enigma104,
-    Enigma13
-  }
+    Enigma13,
+    TextEnigma
+}
 }
 </script>
