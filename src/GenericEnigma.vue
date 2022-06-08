@@ -31,6 +31,7 @@
 <script>
 export default {
     name : 'app-textEnigma',
+    emits: ['enigma-failure'],
     props : {
         imgSrc: String,
         enigmaType: String,
@@ -54,6 +55,7 @@ export default {
                 this.msg = this.answerText
             } else {
                 this.msg = 'Mauvaise réponse :('
+                this.$emit('enigma-failure')
             }
         }
     }
