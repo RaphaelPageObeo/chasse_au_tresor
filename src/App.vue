@@ -1,7 +1,7 @@
 <template>
   <div class="container-fluid vh-100">
     <Header @display-enigma="displayEnigma"></Header>
-    <div class="row bg-secondary text-white d-flex flex-column vh-100">
+    <div class="row app-background-style d-flex flex-column vh-100">
       <div class="col">
         Nombre d'échecs : {{nbFailure}}
         <div v-if="msg != '' ">
@@ -192,3 +192,9 @@ export default {
 }
 }
 </script>
+<style>
+  .app-background-style{
+    background-color: #f2f2f2;
+    color: #404040
+  }
+</style>

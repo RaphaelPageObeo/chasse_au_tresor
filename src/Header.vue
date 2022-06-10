@@ -49,6 +49,6 @@ export default {
 </script>
 <style>
     .header {
-        background-color: #563d7c;
+        background-color: #fec434;
     }
 </style>
