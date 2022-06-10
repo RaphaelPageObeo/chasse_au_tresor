@@ -25,10 +25,10 @@
                     <div class="d-flex justify-content-center">
                         <div class="input-group mb-3">
                             <input type="text" class="form-control" placeholder="Numéro de l'énigme..." 
-                            aria-label="Numéro de l'énigme..." aria-describedby="button-enigma-input" v-model="enigmaInput" 
-                            @keyup.enter="$emit('display-enigma', enigmaInput)">
-                            <button class="btn btn-secondary bi bi-search search-button" type="button" id="button-enigma-input"
-                            @click="$emit('display-enigma', enigmaInput)"></button>
+                                aria-label="Numéro de l'énigme..." aria-describedby="button-enigma-input" v-model="enigmaInput" 
+                                @keyup.enter="$emit('display-enigma', enigmaInput)">
+                            <button class="btn btn-secondary bi bi-search" type="button" id="button-enigma-input"
+                                @click="$emit('display-enigma', enigmaInput)"></button>
                         </div>
                     </div>
                 </div>
@@ -50,8 +50,5 @@ export default {
 <style>
     .header {
         background-color: #563d7c;
-    }
-    .search-button {
-        background-color: #ffffff;
     }
 </style>
