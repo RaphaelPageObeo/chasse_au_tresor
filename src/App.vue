@@ -3,15 +3,14 @@
     <Header @display-enigma="displayEnigma"></Header>
     <div class="row app-background-style d-flex flex-column vh-100">
       <div class="col">
-        Nombre d'échecs : {{nbFailure}}
         <div v-if="msg != '' ">
-          {{msg}}
+          <h2 class="d-flex justify-content-center text-center">{{msg}}</h2>
         </div>
         <div v-if="enigmaToDisplay == '1'">
           <GenericEnigma @enigma-failure="incrementFailure"
           enigma-type = "select"
           enigma-title="Enigme 1 : Lien de Parenté" 
-          enigma-text = "Vous vous dites ceci : 'Je suis un homme. Si le fils de cet autre homme est le père de mon fils, quel est le lien de parenté entre cet homme et moi?'"
+          enigma-text = "Vous vous dites ceci :<br>'Je suis un homme. Si le fils de cet autre homme est le père de mon fils, quel est le lien de parenté entre cet homme et moi?'"
           widget-prefix = "Cet homme est mon ... :"
           :select-options = "[
             {id: 'frère', label: 'Frère'},
@@ -34,7 +33,7 @@
           widget-prefix = "U D T Q C S S ..."
           answerString = "h"
           answerText = "Bonne réponse!
-          Les termes de cette suite correspondent aux initiales des chiffres : << Un, Deux, Trois, Quatre, Cinq, Six, Sept ... >> "/>
+          Les termes de cette suite correspondent aux initiales des chiffres : 'Un, Deux, Trois, Quatre, Cinq, Six, Sept ...'"/>
         </div>
         <div v-if="enigmaToDisplay == '372'">
           <GenericEnigma @enigma-failure="incrementFailure"

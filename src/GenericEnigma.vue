@@ -1,32 +1,35 @@
 <template>
-    <h2>
-        {{enigmaTitle}}
-    </h2>
-    <div v-html="enigmaText"></div>
-    <img v-if="enigmaType =='image'" :src="require(`@/assets/${imgSrc}`)">
+    <h2 class="d-flex justify-content-center">{{enigmaTitle}}</h2>
+    <p v-html="enigmaText"></p>
+    <div class="d-flex justify-content-center">
+        <img v-if="enigmaType =='image'" :src="require(`@/assets/${imgSrc}`)">
+    </div>
     <div>
-        <b>{{widgetPrefix}}</b>
+        <p class="fw-bold">{{widgetPrefix}}</p>
         <div v-if="enigmaType == 'text' || enigmaType =='image'">
-            <input type="text" v-model="value">
+            <div class="input-group mb-3">
+                <input type="text" class="form-control" placeholder="..." 
+                    aria-label="..." aria-describedby="button-enigma-input" v-model="value" 
+                    @keyup.enter="validateAnswer">
+                <button class="btn btn-secondary bi bi-arrow-return-left" type="button" id="button-enigma-input"
+                    @click="validateAnswer"></button>
+            </div>
         </div>
         <div v-if="enigmaType == 'select'">
-            <select v-model="value">
-                <option 
-                v-for="option in selectOptions" 
-                v-bind:value="option.id" 
-                :key="option.id">
+            <select class="form-select" v-model="value">
+                <option v-for="option in selectOptions" 
+                    v-bind:value="option.id" 
+                    :key="option.id">
                     {{ option.label }}
                 </option>
             </select> 
         </div>
-        <b>{{widgetSuffix}}</b>
+        <p class="fw-bold">{{widgetSuffix}}</p>
     </div>
-    <div>
+    <div v-if="enigmaType == 'select'">
+        <button class="btn btn-secondary" @click="validateAnswer">Valider</button>
     </div>
-    <div>
-        <button @click="validateAnswer">Valider</button>
-    </div>
-    {{msg}}
+    <p class="fw-bold">{{msg}}</p> 
 </template>
 <script>
 export default {

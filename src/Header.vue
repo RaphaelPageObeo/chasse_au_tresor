@@ -5,7 +5,7 @@
                 <div class="col-1">
                 </div> 
                 <div class="col-10">
-                    <h3 class="d-flex  justify-content-center text-center">Chasse à l'Amuuur</h3>
+                    <h2 class="d-flex justify-content-center text-center">CHASSE À L'AMUUUR</h2>
                 </div>
                 <div class="col-1">
                     <div class="d-flex justify-content-end">
