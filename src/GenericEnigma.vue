@@ -8,8 +8,8 @@
         <p class="fw-bold">{{widgetPrefix}}</p>
         <div v-if="enigmaType == 'text' || enigmaType =='image'">
             <div class="input-group mb-3">
-                <input type="text" class="form-control" placeholder="..." 
-                    aria-label="..." aria-describedby="button-enigma-input" v-model="value" 
+                <input type="text" class="form-control" placeholder="Saisir votre réponse ici..." 
+                    aria-label="Saisir votre réponse ici..." aria-describedby="button-enigma-input" v-model="value" 
                     @keyup.enter="validateAnswer">
                 <button class="btn btn-secondary bi bi-arrow-return-left" type="button" id="button-enigma-input"
                     @click="validateAnswer"></button>
