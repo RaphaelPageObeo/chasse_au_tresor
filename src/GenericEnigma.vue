@@ -1,12 +1,12 @@
 <template>
-    <h2 class="d-flex justify-content-center">{{enigmaTitle}}</h2>
-    <p v-html="enigmaText"></p>
+    <h2 class="d-flex justify-content-center">{{enigma.title}}</h2>
+    <p v-html="enigma.text"></p>
     <div class="d-flex justify-content-center">
-        <img v-if="enigmaType =='image'" :src="require(`@/assets/${imgSrc}`)">
+        <img v-if="enigma.type =='image'" :src="require(`@/assets/${enigma.imgSrc}`)">
     </div>
     <div>
-        <p class="fw-bold">{{widgetPrefix}}</p>
-        <div v-if="enigmaType == 'text' || enigmaType =='image'">
+        <p class="fw-bold">{{enigma.prefix}}</p>
+        <div v-if="enigma.type == 'text' || enigma.type =='image'">
             <div class="input-group mb-3">
                 <input type="text" class="form-control" placeholder="Saisir votre réponse ici..." 
                     aria-label="Saisir votre réponse ici..." aria-describedby="button-enigma-input" v-model="value" 
@@ -15,18 +15,18 @@
                     @click="validateAnswer"></button>
             </div>
         </div>
-        <div v-if="enigmaType == 'select'">
+        <div v-if="enigma.type == 'select'">
             <select class="form-select" v-model="value">
-                <option v-for="option in selectOptions" 
+                <option v-for="option in enigma.options" 
                     v-bind:value="option.id" 
                     :key="option.id">
                     {{ option.label }}
                 </option>
             </select> 
         </div>
-        <p class="fw-bold">{{widgetSuffix}}</p>
+        <p class="fw-bold">{{enigma.suffix}}</p>
     </div>
-    <div v-if="enigmaType == 'select'">
+    <div v-if="enigma.type == 'select'">
         <button class="btn btn-secondary" @click="validateAnswer">Valider</button>
     </div>
     <p class="fw-bold">{{msg}}</p> 
@@ -36,15 +36,7 @@ export default {
     name : 'app-textEnigma',
     emits: ['enigma-failure'],
     props : {
-        imgSrc: String,
-        enigmaType: String,
-        enigmaTitle: String,
-        enigmaText: String,
-        widgetPrefix: String,
-        widgetSuffix: String,
-        answerString: String,
-        answerText: String,
-        selectOptions: []
+        enigma: Object
     },
     data() {
         return {
@@ -54,8 +46,8 @@ export default {
     },
     methods:{
         validateAnswer(){
-            if(this.value.trim().toLowerCase() == this.answerString) {
-                this.msg = this.answerText
+            if(this.value.trim().toLowerCase() == this.enigma.answer) {
+                this.msg = this.enigma.answerText
             } else {
                 this.msg = 'Mauvaise réponse :('
                 this.$emit('enigma-failure')
