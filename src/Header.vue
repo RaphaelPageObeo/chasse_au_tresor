@@ -9,7 +9,7 @@
                 </div>
                 <div class="col-1">
                     <div class="d-flex justify-content-end">
-                        i
+                        <h1 class="bi bi-person-heart" data-bs-toggle="modal" data-bs-target="#gameStatsModal"></h1>
                     </div>
                 </div>   
             </div>
@@ -35,8 +35,11 @@
             </div>
         </div>
     </div>
+    <GameStats />
 </template>
 <script>
+import GameStats from './GameStats.vue'
+
 export default {
     name : 'app-header',
     emits: ['display-enigma'],
@@ -45,6 +48,14 @@ export default {
             enigmaInput:'',
         }
     },
+    methods : {
+        open() {
+            console.log('ok boomer')
+        }
+    },
+    components : {
+        GameStats
+    }
 }
 </script>
 <style>

@@ -67,7 +67,7 @@ export default {
   components : {
     GenericEnigma,
     Header
-}
+  }
 }
 </script>
 <style>
