@@ -1,14 +1,26 @@
 <template>
   <div class="container-fluid vh-100">
     <Header 
-      @display-enigma="displayEnigma"
       :nbFailure="nbFailure"
       :completedEnigmasTitle="completedEnigmasTitle"
     ></Header>
     <div class="row app-background-style d-flex flex-column vh-100">
       <div class="col">
-        <div v-if="msg != '' ">
-          <h2 class="d-flex justify-content-center text-center">{{msg}}</h2>
+        <div class ="row">
+          <div class="col">
+            <div class="input-group mb-3  mt-3">
+              <input type="text" class="form-control" placeholder="Numéro de l'énigme..." 
+                  aria-label="Numéro de l'énigme..." aria-describedby="button-enigma-input" v-model="enigmaInput" 
+                  @keyup.enter="displayEnigma()">
+              <button class="btn btn-secondary bi bi-search" type="button" id="button-enigma-input"
+                  @click="displayEnigma()"></button>
+            </div>
+          </div>
+        </div>
+        <div class ="row">
+          <div v-if="msg != '' ">
+            <h2 class="d-flex justify-content-center text-center">{{msg}}</h2>
+          </div>
         </div>
         <div v-for="enigma in enigmas" :key="enigma.id">
           <div v-if="enigma.id == enigmaToDisplay">
@@ -37,19 +49,20 @@ export default {
       completedEnigmasTitle:[],
       enigmaToDisplay:'',
       nbFailure: 0,
-      enigmas: enigmasData.enigmas
+      enigmas: enigmasData.enigmas,
+      enigmaInput : ''
     }
   },
   mounted() {
     this.loadCookies()
   },
   methods:{
-    displayEnigma(enigmaCode){
-      if(this.authorizedEnigmas.includes(enigmaCode)) {
-        this.enigmaToDisplay = enigmaCode
+    displayEnigma(){
+      if(this.authorizedEnigmas.includes(this.enigmaInput)) {
+        this.enigmaToDisplay = this.enigmaInput
         this.msg = ''
       } else {
-        this.enigmaToDisplay = enigmaCode
+        this.enigmaToDisplay = this.enigmaInput
         this.msg = "Ce numéro n'est pas autorisé."
       }
     },

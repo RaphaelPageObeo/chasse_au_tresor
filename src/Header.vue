@@ -20,19 +20,6 @@
                     </div>
                 </div>
             </div>
-            <div class ="row">
-                <div class="col">
-                    <div class="d-flex justify-content-center">
-                        <div class="input-group mb-3">
-                            <input type="text" class="form-control" placeholder="Numéro de l'énigme..." 
-                                aria-label="Numéro de l'énigme..." aria-describedby="button-enigma-input" v-model="enigmaInput" 
-                                @keyup.enter="$emit('display-enigma', enigmaInput)">
-                            <button class="btn btn-secondary bi bi-search" type="button" id="button-enigma-input"
-                                @click="$emit('display-enigma', enigmaInput)"></button>
-                        </div>
-                    </div>
-                </div>
-            </div>
         </div>
     </div>
     <GameStats 
@@ -45,12 +32,6 @@ import GameStats from './GameStats.vue'
 
 export default {
     name : 'app-header',
-    emits: ['display-enigma'],
-    data() {
-        return {
-            enigmaInput:'',
-        }
-    },
     props : {
         nbFailure : Number,
         completedEnigmasTitle: Array
