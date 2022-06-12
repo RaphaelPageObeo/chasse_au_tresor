@@ -34,7 +34,7 @@
 <script>
 export default {
     name : 'app-textEnigma',
-    emits: ['enigma-failure'],
+    emits: ['enigma-failure', 'enigma-success'],
     props : {
         enigma: Object
     },
@@ -48,6 +48,7 @@ export default {
         validateAnswer(){
             if(this.value.trim().toLowerCase() == this.enigma.answer) {
                 this.msg = this.enigma.answerText
+                this.$emit('enigma-success', this.enigma)
             } else {
                 this.msg = 'Mauvaise réponse :('
                 this.$emit('enigma-failure')

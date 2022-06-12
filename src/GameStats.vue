@@ -13,17 +13,27 @@
                     <p>start time placeholder</p>
                     <b>Fin de la partie</b>
                     <p>end time placeholder</p>
-                    <b>Nombre d'énigmes accomplies</b>
-                    <p>Nb enigmas placeholder</p>
-                    <b>Codes des énigmes accomplies</b>
-                    <p>Enigmas code placeholder</p>
                     <b>Nombre d'erreurs</b>
-                    <p>Nb errors placeholder</p>
+                    <p>{{nbFailure}}</p>
+                    <b>Nombre d'énigmes accomplies</b>
+                    <p>{{completedEnigmasTitle.length}}</p>
+                    <b>Codes des énigmes accomplies</b>
+                    <p v-if="completedEnigmasTitle.length>0">{{completedEnigmasTitle.join(', ')}}</p>
+                    <p v-else>Aucune énigme n'a encore été accomplie</p>
                 </div>
             </div>
         </div>
     </div>
 </template>
+<script>
+    export default {
+        name : 'app-gameStats',
+        props : {
+            nbFailure : Number,
+            completedEnigmasTitle: Array
+        },
+    }
+</script>
 <style>
     .modal-content {
         background-color: #f2f2f2;

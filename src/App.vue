@@ -1,6 +1,10 @@
 <template>
   <div class="container-fluid vh-100">
-    <Header @display-enigma="displayEnigma"></Header>
+    <Header 
+      @display-enigma="displayEnigma"
+      :nbFailure="nbFailure"
+      :completedEnigmasTitle="completedEnigmasTitle"
+    ></Header>
     <div class="row app-background-style d-flex flex-column vh-100">
       <div class="col">
         <div v-if="msg != '' ">
@@ -10,6 +14,7 @@
           <div v-if="enigma.id == enigmaToDisplay">
             <GenericEnigma 
               @enigma-failure="incrementFailure"
+              @enigma-success="enigmaSuccess"
               :enigma="enigma"
             />
           </div>
@@ -29,6 +34,7 @@ export default {
     return {
       msg:'',
       authorizedEnigmas:['1','7','372', '800','104', '13', '172', '210', '750', '143'],
+      completedEnigmasTitle:[],
       enigmaToDisplay:'',
       nbFailure: 0,
       enigmas: enigmasData.enigmas
@@ -36,7 +42,6 @@ export default {
   },
   mounted() {
     this.loadCookies()
-    this.loadEnigmas()
   },
   methods:{
     displayEnigma(enigmaCode){
@@ -52,16 +57,21 @@ export default {
       this.nbFailure++
       this.$cookies.set("nbFailure",this.nbFailure)
     },
+    enigmaSuccess(enigma){
+      if(!this.completedEnigmasTitle.includes(enigma.title)) {
+        this.completedEnigmasTitle.push(enigma.title)
+        this.$cookies.set("completedEnigmasTitle", JSON.stringify(this.completedEnigmasTitle))
+      }
+    },
     loadCookies() {
       var nbFailureCookie = this.$cookies.get("nbFailure")
       if(nbFailureCookie != null) {
         this.nbFailure = nbFailureCookie
-      } else {
-        this.nbFailure = 0 
       }
-    },
-    loadEnigmas() {
-
+      var completedEnigmasCookies = this.$cookies.get("completedEnigmasTitle")
+      if(completedEnigmasCookies != null) {
+        this.completedEnigmasTitle = JSON.parse(completedEnigmasCookies)
+      }
     }
   },
   components : {

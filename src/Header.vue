@@ -35,7 +35,10 @@
             </div>
         </div>
     </div>
-    <GameStats />
+    <GameStats 
+        :nbFailure="nbFailure"
+        :completedEnigmasTitle="completedEnigmasTitle"
+    />
 </template>
 <script>
 import GameStats from './GameStats.vue'
@@ -48,10 +51,9 @@ export default {
             enigmaInput:'',
         }
     },
-    methods : {
-        open() {
-            console.log('ok boomer')
-        }
+    props : {
+        nbFailure : Number,
+        completedEnigmasTitle: Array
     },
     components : {
         GameStats
