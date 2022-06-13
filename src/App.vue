@@ -83,6 +83,7 @@ export default {
       if(this.authorizedEnigmas.includes(this.enigmaInput)) {
         this.enigmaToDisplay = this.enigmaInput
         this.msg = ''
+        this.$cookies.set("enigmaToDisplay",this.enigmaToDisplay)
       } else {
         this.enigmaToDisplay = this.enigmaInput
         this.msg = "Ce numéro n'est pas autorisé."
@@ -111,12 +112,21 @@ export default {
       if(startTimeCookie != null) {
         this.startTime = startTimeCookie
       }
+      var enigmaToDisplayCookie = this.$cookies.get("enigmaToDisplay")
+      if(enigmaToDisplayCookie != null) {
+        this.enigmaToDisplay = enigmaToDisplayCookie
+      }
+      var teamNameCookie = this.$cookies.get("teamName")
+      if(teamNameCookie != null) {
+        this.teamName = teamNameCookie
+      }
     },
     start(teamName){
       this.teamName = teamName
       var today = new Date()
       this.startTime = today.toLocaleTimeString('en-FR')
       this.$cookies.set("startTime",this.startTime )
+      this.$cookies.set("teamName",this.teamName )
     },
   },
   components : {
