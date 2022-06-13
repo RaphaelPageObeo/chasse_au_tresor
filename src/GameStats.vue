@@ -8,11 +8,14 @@
                 </div>
                 <div class="modal-body">
                     <b>Nom de l'équipe</b>
-                    <p>Team name placeholder</p>
+                    <p v-if="teamName != ''">{{teamName}}</p>
+                    <p v-else>Pas encore de nom d'équipe</p>
                     <b>Début de la partie</b>
-                    <p>start time placeholder</p>
+                    <p v-if="startTime != ''">{{startTime}}</p>
+                    <p v-else>La chasse n'a pas encore été lancée</p>
                     <b>Fin de la partie</b>
-                    <p>end time placeholder</p>
+                    <p v-if="endTime != ''">{{endTime}}</p>
+                    <p v-else>La chasse n'est pas terminée</p>
                     <b>Nombre d'erreurs</b>
                     <p>{{nbFailure}}</p>
                     <b>Nombre d'énigmes accomplies</b>
@@ -30,7 +33,10 @@
         name : 'app-gameStats',
         props : {
             nbFailure : Number,
-            completedEnigmasTitle: Array
+            completedEnigmasTitle: Array,
+            startTime : String,
+            teamName : String,
+            endTime : String
         },
     }
 </script>

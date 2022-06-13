@@ -3,12 +3,24 @@
     <Header 
       :nbFailure="nbFailure"
       :completedEnigmasTitle="completedEnigmasTitle"
+      :startTime="startTime"
+      :teamName="teamName"
+      :endTime="endTime"
     ></Header>
     <div class="row app-background-style d-flex flex-column vh-100">
       <div class="col">
         <div class ="row">
           <div class="col">
-            <div class="input-group mb-3  mt-3">
+            <div v-if="teamName==''">
+              <TeamNamePicker 
+                @start="start"
+              />
+            </div>
+          </div>
+        </div>
+        <div class ="row">
+          <div class="col">
+            <div v-if="teamName!=''" class="input-group mb-3  mt-3">
               <input type="text" class="form-control" placeholder="Numéro de l'énigme..." 
                   aria-label="Numéro de l'énigme..." aria-describedby="button-enigma-input" v-model="enigmaInput" 
                   @keyup.enter="displayEnigma()">
@@ -18,17 +30,23 @@
           </div>
         </div>
         <div class ="row">
-          <div v-if="msg != '' ">
-            <h2 class="d-flex justify-content-center text-center">{{msg}}</h2>
+          <div class="col">
+            <div v-if="msg != '' ">
+              <h2 class="d-flex justify-content-center text-center">{{msg}}</h2>
+            </div>
           </div>
         </div>
-        <div v-for="enigma in enigmas" :key="enigma.id">
-          <div v-if="enigma.id == enigmaToDisplay">
-            <GenericEnigma 
-              @enigma-failure="incrementFailure"
-              @enigma-success="enigmaSuccess"
-              :enigma="enigma"
-            />
+        <div class="row">
+          <div class="col">
+            <div v-for="enigma in enigmas" :key="enigma.id">
+              <div v-if="enigma.id == enigmaToDisplay && teamName != ''">
+                <GenericEnigma 
+                  @enigma-failure="incrementFailure"
+                  @enigma-success="enigmaSuccess"
+                  :enigma="enigma"
+                />
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -38,6 +56,7 @@
 <script>
 import GenericEnigma from './GenericEnigma.vue'
 import Header from './Header.vue'
+import TeamNamePicker from './TeamNamePicker.vue'
 import enigmasData from './data/Enigmas.json'
 
 export default {
@@ -47,10 +66,13 @@ export default {
       msg:'',
       authorizedEnigmas:['1','7','372', '800','104', '13', '172', '210', '750', '143'],
       completedEnigmasTitle:[],
-      enigmaToDisplay:'',
+      enigmaToDisplay:'1',
       nbFailure: 0,
       enigmas: enigmasData.enigmas,
-      enigmaInput : ''
+      enigmaInput : '',
+      teamName : "",
+      startTime : "",
+      endTime : ""
     }
   },
   mounted() {
@@ -81,15 +103,26 @@ export default {
       if(nbFailureCookie != null) {
         this.nbFailure = nbFailureCookie
       }
-      var completedEnigmasCookies = this.$cookies.get("completedEnigmasTitle")
-      if(completedEnigmasCookies != null) {
-        this.completedEnigmasTitle = JSON.parse(completedEnigmasCookies)
+      var completedEnigmasCookie = this.$cookies.get("completedEnigmasTitle")
+      if(completedEnigmasCookie != null) {
+        this.completedEnigmasTitle = JSON.parse(completedEnigmasCookie)
       }
-    }
+      var startTimeCookie = this.$cookies.get("startTime")
+      if(startTimeCookie != null) {
+        this.startTime = startTimeCookie
+      }
+    },
+    start(teamName){
+      this.teamName = teamName
+      var today = new Date()
+      this.startTime = today.toLocaleTimeString('en-FR')
+      this.$cookies.set("startTime",this.startTime )
+    },
   },
   components : {
     GenericEnigma,
-    Header
+    Header,
+    TeamNamePicker
   }
 }
 </script>

@@ -25,6 +25,9 @@
     <GameStats 
         :nbFailure="nbFailure"
         :completedEnigmasTitle="completedEnigmasTitle"
+        :startTime="startTime"
+        :teamName="teamName"
+        :endTime="endTime"
     />
 </template>
 <script>
@@ -34,7 +37,10 @@ export default {
     name : 'app-header',
     props : {
         nbFailure : Number,
-        completedEnigmasTitle: Array
+        completedEnigmasTitle: Array,
+        startTime : String,
+        teamName:String,
+        endTime:String
     },
     components : {
         GameStats
