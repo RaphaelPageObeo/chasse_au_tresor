@@ -44,6 +44,7 @@
                   @enigma-failure="incrementFailure"
                   @enigma-success="enigmaSuccess"
                   :enigma="enigma"
+                  :solved="completedEnigmasTitle.includes(enigma.title)"
                 />
               </div>
             </div>
@@ -69,7 +70,7 @@ export default {
       enigmaToDisplay:'1',
       nbFailure: 0,
       enigmas: enigmasData.enigmas,
-      enigmaInput : '',
+      enigmaInput : '1',
       teamName : "",
       startTime : "",
       endTime : ""
@@ -115,6 +116,7 @@ export default {
       var enigmaToDisplayCookie = this.$cookies.get("enigmaToDisplay")
       if(enigmaToDisplayCookie != null) {
         this.enigmaToDisplay = enigmaToDisplayCookie
+        this.enigmaInput = enigmaToDisplayCookie
       }
       var teamNameCookie = this.$cookies.get("teamName")
       if(teamNameCookie != null) {
