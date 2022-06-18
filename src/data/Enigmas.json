@@ -1,9 +1,9 @@
 { "enigmas" : 
     [
         {
-            "id" : "1",
+            "id" : "kly4t",
             "type" : "select",
-            "title":"Enigme 1 : Lien de Parenté", 
+            "title":"Enigme 2 : Lien de Parenté", 
             "text" : "Vous vous dites ceci :<br>'Je suis un homme. Si le fils de cet autre homme est le père de mon fils, quel est le lien de parenté entre cet homme et moi?'",
             "prefix" : "Cet homme est mon ... :",
             "options" : [
@@ -40,18 +40,18 @@
             "answerText" : "Bonne réponse! Le père de mon fils = moi. Donc la phrase devient : ' Si le fils de cet homme c'est moi, quel est le lien de parenté entre cet homme et moi? '."
         },
         {
-            "id" : "7",
+            "id" : "bseha",
             "type" : "text",
-            "title":"Enigme 7 : Suite Logique", 
+            "title":"Enigme 8 : Suite Logique", 
             "text" : "Quelle est la prochaine lettre de cette suite logique : ",
             "prefix" : "U D T Q C S S ...",
             "answer" : "h",
             "answerText" : "Bonne réponse! Les termes de cette suite correspondent aux initiales des chiffres : 'Un, Deux, Trois, Quatre, Cinq, Six, Sept ...'"
         },
         {
-            "id" : "372",
+            "id" : "g0zt2",
             "type" : "text",
-            "title":"Enigme 372 : En manque d'air", 
+            "title":"Enigme 10 : En manque d'air", 
             "text" : "Écrivez en toute lettre le chiffre manquant tout en conservant la cohérence de la phrase :",
             "prefix" : "Dans cette phrase, le 'r' est présent ",
             "suffix" : "fois.",
@@ -59,9 +59,9 @@
             "answerText" : "Bonne réponse! Trois ne peut pas convenir, car il contient un R. Quatre convient alors."
         },    
         {
-            "id" : "800",
+            "id" : "er7r5",
             "type" : "select",
-            "title":"Enigme 800 : Mot de passe", 
+            "title":"Enigme 4 : Mot de passe", 
             "text" : "Un légat du pape souhaite assister à une réunion secrète tenue par les chevaliers cathares. Pour être admis, il doit donner le mot de passe au garde à l'entrée. Il se cache et écoute les personnes qui se présentent. <br> Un homme arrive.<br> Le garde lui dit : 'Cinq', l'homme répond 'Quatre'. Le garde le laisse entrer.<br>Un deuxième se présente. <br>Le garde lui dit : 'Six', il répond : 'Trois' et passe.<br>Un dernier paraît.<br>Le garde lui dit : 'Quatre', il répond 'Six' et entre.<br>Arrive le tour du légat du pape.<br>Le garde lui dit : 'Sept'.",
             "prefix" : "Que doit-il répondre pour pouvoir entrer?",
             "options" : [
@@ -114,27 +114,27 @@
             "answerText" : "Bonne réponse! 'Quatre' correspond au nombre de lettres du chiffre prononcé par le garde."
         },
         {
-            "id" : "104",
+            "id" : "v7zo6",
             "type" : "text",
-            "title": "Enigme 104 : Oeufs de Poules", 
+            "title": "Enigme 1 : Oeufs de Poules", 
             "text" : "Huit cents poules pondent en moyenne huit cents oeufs en huit jours.",
             "prefix" : "Combien d'oeufs pondent quatre cents poules en quatre jours? (en chiffres) ",
             "answer" : "200",
             "answerText" : "Bonne réponse! En effet, quatre cents poules pondent quatre cents oeufs en huit jours. Donc quatre cents poules pondent deux cents oeufs en quatre jours."
         },  
         {
-            "id" : "13",
+            "id" : "43k4c",
             "type" : "image",
-            "title": "Enigme 13 : Lettre en Rébus", 
+            "title": "Enigme 3 : Lettre en Rébus", 
             "imgSrc" : "Enigma13.jpg",
             "prefix" : "Quelle expression se cache derrière ce dessin?",
             "answer" : "plus de peur que de mal",
             "answerText" : "Bonne réponse!"
         }, 
         {
-            "id" : "172",
+            "id" : "ftbx9",
             "type" : "select",
-            "title": "Enigme 172 : Quel jour?", 
+            "title": "Enigme 6 : Quel jour?", 
             "text" : "Si nous ne sommes pas le lendemain de lundi ou le jour avant jeudi, que demain n'est pas dimanche, que ce n'était pas dimanche hier et que le jour d'après demain n'est pas samedi, et que le jour avant hier n'était pas mercredi...",
             "prefix" : "Quel jour sommes-nous?",
             "options" : [
@@ -171,18 +171,18 @@
             "answerText" : "Bonne réponse!"
         },  
         {
-            "id" : "210",
+            "id" : "7gamf",
             "type" : "image",
-            "title": "Enigme 210 : Lettre en Rébus 2", 
+            "title": "Enigme 7 : Lettre en Rébus 2", 
             "imgSrc" : "Enigma210.jpg",
             "prefix" : "Quelle expression se cache derrière ce dessin?",
             "answer" : "mettre les petits plats dans les grands",
             "answerText" : "Bonne réponse!"
         }, 
         {
-            "id" : "750",
+            "id" : "gh6jz",
             "type" : "image",
-            "title": "Enigme 750 : Cour d'honneur", 
+            "title": "Enigme 5 : Cour d'honneur", 
             "imgSrc" : "Enigma750.jpg",
             "text" : "Cette figure représente le pavage d'une cour d'honneur.",
             "prefix" : "Combien comporte-t-elle de carrés au total? (en chiffre)",
@@ -190,9 +190,9 @@
             "answerText" : "Bonne réponse! Seize de taille 1x1 ; neuf de taille 2x2 ; quatre de taille 3x3 ; un de taille 4x4"
         }, 
         {
-            "id" : "143",
+            "id" : "jjk6s",
             "type" : "text",
-            "title": "Enigme 143 : Escargot grimpeur", 
+            "title": "Enigme 9 : Escargot grimpeur", 
             "text" : "Un escargot veut grimper au sommet d'un mur de 10 m de haut. Mais il se déplace d'une façon très particulière : pendant la journée, il monte de 3 m et, durant la nuit, il redescend de 2 m.",
             "prefix" : "S'il commence son ascension un matin, combien de jours lui faudra-t-il pour accéder au sommet de ce mur? (en chiffres)",
             "answer" : "8",

@@ -19,10 +19,7 @@
                     <b>Nombre d'erreurs</b>
                     <p>{{nbFailure}}</p>
                     <b>Nombre d'énigmes accomplies</b>
-                    <p>{{completedEnigmasTitle.length}}</p>
-                    <b>Codes des énigmes accomplies</b>
-                    <p v-if="completedEnigmasTitle.length>0">{{completedEnigmasTitle.join(', ')}}</p>
-                    <p v-else>Aucune énigme n'a encore été accomplie</p>
+                    <p>{{completedEnigmasTitle.length}} / 10</p>
                 </div>
             </div>
         </div>

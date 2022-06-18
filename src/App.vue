@@ -23,9 +23,9 @@
             <div v-if="teamName!=''" class="input-group mb-3  mt-3">
               <input type="text" class="form-control" placeholder="Numéro de l'énigme..." 
                   aria-label="Numéro de l'énigme..." aria-describedby="button-enigma-input" v-model="enigmaInput" 
-                  @keyup.enter="displayEnigma()">
+                  @keyup.enter="displayEnigma()" :disabled="completedEnigmasTitle.length == 0">
               <button class="btn btn-secondary bi bi-search" type="button" id="button-enigma-input"
-                  @click="displayEnigma()"></button>
+                  @click="displayEnigma()" :disabled="completedEnigmasTitle.length == 0"></button>
             </div>
           </div>
         </div>
@@ -65,12 +65,12 @@ export default {
   data() {
     return {
       msg:'',
-      authorizedEnigmas:['1','7','372', '800','104', '13', '172', '210', '750', '143'],
+      authorizedEnigmas:['v7zo6','kly4t','43k4c', 'er7r5','gh6jz', 'ftbx9', '7gamf', 'bseha', 'jjk6s', 'g0zt2'],
       completedEnigmasTitle:[],
-      enigmaToDisplay:'1',
+      enigmaToDisplay:'v7zo6',
       nbFailure: 0,
       enigmas: enigmasData.enigmas,
-      enigmaInput : '1',
+      enigmaInput : 'v7zo6',
       teamName : "",
       startTime : "",
       endTime : ""
