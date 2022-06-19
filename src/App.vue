@@ -23,9 +23,9 @@
             <div v-if="teamName!=''" class="input-group mb-3  mt-3">
               <input type="text" class="form-control" placeholder="Numéro de l'énigme..." 
                   aria-label="Numéro de l'énigme..." aria-describedby="button-enigma-input" v-model="enigmaInput" 
-                  @keyup.enter="displayEnigma()" :disabled="completedEnigmasId.length == 0">
+                  @keyup.enter="displayEnigma()" :disabled="!completedEnigmasId.includes(enigmaToDisplay)">
               <button class="btn btn-secondary bi bi-search" type="button" id="button-enigma-input"
-                  @click="displayEnigma()" :disabled="completedEnigmasId.length == 0"></button>
+                  @click="displayEnigma()" :disabled="!completedEnigmasId.includes(enigmaToDisplay)"></button>
             </div>
           </div>
         </div>
@@ -40,16 +40,13 @@
           <div class="col">
             <div v-for="enigma in enigmas" :key="enigma.id">
               <div v-if="teamName != '' && enigma.id == enigmaToDisplay"> 
-                <div v-if=" completedEnigmasId.length >= enigma.order"> 
+                <div v-if="completedEnigmasId.length >= enigma.order"> 
                   <GenericEnigma 
                     @enigma-failure="incrementFailure"
                     @enigma-success="enigmaSuccess"
                     :enigma="enigma"
                     :solved="completedEnigmasId.includes(enigma.id)"
                   />
-                </div>
-                <div v-else> 
-                  <h2 class="d-flex justify-content-center text-center">Vous n'avez pas encore accès à cette énigme.</h2>
                 </div>
               </div>
             </div>
@@ -70,7 +67,6 @@ export default {
   data() {
     return {
       msg:'',
-      authorizedEnigmas:['v7zo6','kly4t','43k4c', 'er7r5','gh6jz', 'ftbx9', '7gamf', 'bseha', 'jjk6s', 'g0zt2'],
       completedEnigmasId:[],
       enigmaToDisplay:'v7zo6',
       nbFailure: 0,
@@ -86,12 +82,18 @@ export default {
   },
   methods:{
     displayEnigma(){
-      if(this.authorizedEnigmas.includes(this.enigmaInput)) {
-        this.enigmaToDisplay = this.enigmaInput
-        this.msg = ''
-        this.$cookies.set("enigmaToDisplay",this.enigmaToDisplay)
+      const enigma = this.enigmas
+        .find(enigma => enigma.id == this.enigmaInput)
+
+      if(enigma != undefined) {
+        if(this.completedEnigmasId.length >= enigma.order){
+          this.enigmaToDisplay = this.enigmaInput
+          this.msg = ''
+          this.$cookies.set("enigmaToDisplay",this.enigmaToDisplay)
+        } else {
+          this.msg = "Vous n'avez pas encore accès à cette énigme."
+        }
       } else {
-        this.enigmaToDisplay = this.enigmaInput
         this.msg = "Ce numéro n'est pas autorisé."
       }
     },
