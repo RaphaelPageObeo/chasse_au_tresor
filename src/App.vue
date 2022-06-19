@@ -2,7 +2,7 @@
   <div class="container-fluid vh-100">
     <Header 
       :nbFailure="nbFailure"
-      :completedEnigmasTitle="completedEnigmasTitle"
+      :completedEnigmasId="completedEnigmasId"
       :startTime="startTime"
       :teamName="teamName"
       :endTime="endTime"
@@ -23,9 +23,9 @@
             <div v-if="teamName!=''" class="input-group mb-3  mt-3">
               <input type="text" class="form-control" placeholder="Numéro de l'énigme..." 
                   aria-label="Numéro de l'énigme..." aria-describedby="button-enigma-input" v-model="enigmaInput" 
-                  @keyup.enter="displayEnigma()" :disabled="completedEnigmasTitle.length == 0">
+                  @keyup.enter="displayEnigma()" :disabled="completedEnigmasId.length == 0">
               <button class="btn btn-secondary bi bi-search" type="button" id="button-enigma-input"
-                  @click="displayEnigma()" :disabled="completedEnigmasTitle.length == 0"></button>
+                  @click="displayEnigma()" :disabled="completedEnigmasId.length == 0"></button>
             </div>
           </div>
         </div>
@@ -39,13 +39,18 @@
         <div class="row">
           <div class="col">
             <div v-for="enigma in enigmas" :key="enigma.id">
-              <div v-if="enigma.id == enigmaToDisplay && teamName != ''">
-                <GenericEnigma 
-                  @enigma-failure="incrementFailure"
-                  @enigma-success="enigmaSuccess"
-                  :enigma="enigma"
-                  :solved="completedEnigmasTitle.includes(enigma.title)"
-                />
+              <div v-if="teamName != '' && enigma.id == enigmaToDisplay"> 
+                <div v-if=" completedEnigmasId.length >= enigma.order"> 
+                  <GenericEnigma 
+                    @enigma-failure="incrementFailure"
+                    @enigma-success="enigmaSuccess"
+                    :enigma="enigma"
+                    :solved="completedEnigmasId.includes(enigma.id)"
+                  />
+                </div>
+                <div v-else> 
+                  <h2 class="d-flex justify-content-center text-center">Vous n'avez pas encore accès à cette énigme.</h2>
+                </div>
               </div>
             </div>
           </div>
@@ -66,7 +71,7 @@ export default {
     return {
       msg:'',
       authorizedEnigmas:['v7zo6','kly4t','43k4c', 'er7r5','gh6jz', 'ftbx9', '7gamf', 'bseha', 'jjk6s', 'g0zt2'],
-      completedEnigmasTitle:[],
+      completedEnigmasId:[],
       enigmaToDisplay:'v7zo6',
       nbFailure: 0,
       enigmas: enigmasData.enigmas,
@@ -95,9 +100,9 @@ export default {
       this.$cookies.set("nbFailure",this.nbFailure)
     },
     enigmaSuccess(enigma){
-      if(!this.completedEnigmasTitle.includes(enigma.title)) {
-        this.completedEnigmasTitle.push(enigma.title)
-        this.$cookies.set("completedEnigmasTitle", JSON.stringify(this.completedEnigmasTitle))
+      if(!this.completedEnigmasId.includes(enigma.id)) {
+        this.completedEnigmasId.push(enigma.id)
+        this.$cookies.set("completedEnigmasId", JSON.stringify(this.completedEnigmasId))
       }
     },
     loadCookies() {
@@ -105,9 +110,9 @@ export default {
       if(nbFailureCookie != null) {
         this.nbFailure = nbFailureCookie
       }
-      var completedEnigmasCookie = this.$cookies.get("completedEnigmasTitle")
+      var completedEnigmasCookie = this.$cookies.get("completedEnigmasId")
       if(completedEnigmasCookie != null) {
-        this.completedEnigmasTitle = JSON.parse(completedEnigmasCookie)
+        this.completedEnigmasId = JSON.parse(completedEnigmasCookie)
       }
       var startTimeCookie = this.$cookies.get("startTime")
       if(startTimeCookie != null) {

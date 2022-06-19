@@ -19,7 +19,7 @@
                     <b>Nombre d'erreurs</b>
                     <p>{{nbFailure}}</p>
                     <b>Nombre d'énigmes accomplies</b>
-                    <p>{{completedEnigmasTitle.length}} / 10</p>
+                    <p>{{completedEnigmasId.length}} / 10</p>
                 </div>
             </div>
         </div>
@@ -30,7 +30,7 @@
         name : 'app-gameStats',
         props : {
             nbFailure : Number,
-            completedEnigmasTitle: Array,
+            completedEnigmasId: Array,
             startTime : String,
             teamName : String,
             endTime : String

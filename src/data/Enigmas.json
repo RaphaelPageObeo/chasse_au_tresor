@@ -2,6 +2,7 @@
     [
         {
             "id" : "kly4t",
+            "order" : 1,
             "type" : "select",
             "title":"Enigme 2 : Lien de Parenté", 
             "text" : "Vous vous dites ceci :<br>'Je suis un homme. Si le fils de cet autre homme est le père de mon fils, quel est le lien de parenté entre cet homme et moi?'",
@@ -41,6 +42,7 @@
         },
         {
             "id" : "bseha",
+            "order" : 7,
             "type" : "text",
             "title":"Enigme 8 : Suite Logique", 
             "text" : "Quelle est la prochaine lettre de cette suite logique : ",
@@ -50,6 +52,7 @@
         },
         {
             "id" : "g0zt2",
+            "order" : 9,
             "type" : "text",
             "title":"Enigme 10 : En manque d'air", 
             "text" : "Écrivez en toute lettre le chiffre manquant tout en conservant la cohérence de la phrase :",
@@ -60,6 +63,7 @@
         },    
         {
             "id" : "er7r5",
+            "order" : 3,
             "type" : "select",
             "title":"Enigme 4 : Mot de passe", 
             "text" : "Un légat du pape souhaite assister à une réunion secrète tenue par les chevaliers cathares. Pour être admis, il doit donner le mot de passe au garde à l'entrée. Il se cache et écoute les personnes qui se présentent. <br> Un homme arrive.<br> Le garde lui dit : 'Cinq', l'homme répond 'Quatre'. Le garde le laisse entrer.<br>Un deuxième se présente. <br>Le garde lui dit : 'Six', il répond : 'Trois' et passe.<br>Un dernier paraît.<br>Le garde lui dit : 'Quatre', il répond 'Six' et entre.<br>Arrive le tour du légat du pape.<br>Le garde lui dit : 'Sept'.",
@@ -115,6 +119,7 @@
         },
         {
             "id" : "v7zo6",
+            "order" : 0,
             "type" : "text",
             "title": "Enigme 1 : Oeufs de Poules", 
             "text" : "Huit cents poules pondent en moyenne huit cents oeufs en huit jours.",
@@ -124,6 +129,7 @@
         },  
         {
             "id" : "43k4c",
+            "order" : 2,
             "type" : "image",
             "title": "Enigme 3 : Lettre en Rébus", 
             "imgSrc" : "Enigma13.jpg",
@@ -133,6 +139,7 @@
         }, 
         {
             "id" : "ftbx9",
+            "order" : 5,
             "type" : "select",
             "title": "Enigme 6 : Quel jour?", 
             "text" : "Si nous ne sommes pas le lendemain de lundi ou le jour avant jeudi, que demain n'est pas dimanche, que ce n'était pas dimanche hier et que le jour d'après demain n'est pas samedi, et que le jour avant hier n'était pas mercredi...",
@@ -172,6 +179,7 @@
         },  
         {
             "id" : "7gamf",
+            "order" : 6,
             "type" : "image",
             "title": "Enigme 7 : Lettre en Rébus 2", 
             "imgSrc" : "Enigma210.jpg",
@@ -181,6 +189,7 @@
         }, 
         {
             "id" : "gh6jz",
+            "order" : 4,
             "type" : "image",
             "title": "Enigme 5 : Cour d'honneur", 
             "imgSrc" : "Enigma750.jpg",
@@ -191,6 +200,7 @@
         }, 
         {
             "id" : "jjk6s",
+            "order" : 8,
             "type" : "text",
             "title": "Enigme 9 : Escargot grimpeur", 
             "text" : "Un escargot veut grimper au sommet d'un mur de 10 m de haut. Mais il se déplace d'une façon très particulière : pendant la journée, il monte de 3 m et, durant la nuit, il redescend de 2 m.",
