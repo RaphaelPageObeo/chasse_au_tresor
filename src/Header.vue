@@ -3,6 +3,9 @@
         <div class="col">
             <div class ="row">
                 <div class="col-1">
+                    <div class="d-flex justify-content-start">
+                        <h1 class="bi bi-info-lg" data-bs-toggle="modal" data-bs-target="#informationsModal"></h1>
+                    </div>
                 </div> 
                 <div class="col-10">
                     <h1 class="d-flex justify-content-center text-center">CHASSE À L'AMUUUR</h1>
@@ -16,12 +19,13 @@
             <div class ="row">
                 <div class = "col">
                     <div class="d-flex justify-content-center">
-                        <img src="./assets/kissKiss.png" class="img-fluid" alt="Responsive image">
+                        <img src="./assets/kissKiss.png" class="img-fluid" alt="Bisous Margaux et Loréna">
                     </div>
                 </div>
             </div>
         </div>
     </div>
+    <Informations/>
     <GameStats 
         :nbFailure="nbFailure"
         :completedEnigmasId="completedEnigmasId"
@@ -32,6 +36,7 @@
 </template>
 <script>
 import GameStats from './GameStats.vue'
+import Informations from './Informations.vue'
 
 export default {
     name : 'app-header',
@@ -43,7 +48,8 @@ export default {
         endTime:String
     },
     components : {
-        GameStats
+        GameStats,
+        Informations
     }
 }
 </script>
