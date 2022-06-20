@@ -20,9 +20,9 @@
         </div>
         <div class ="row">
           <div class="col">
-            <div v-if="teamName!=''" class="input-group mb-3  mt-3">
+            <div v-if="completedEnigmasId.length!=0" class="input-group mb-3  mt-3">
               <input type="text" class="form-control" placeholder="Numéro de l'énigme..." 
-                  aria-label="Numéro de l'énigme..." aria-describedby="button-enigma-input" v-model="enigmaInput" 
+                  aria-label="Code de l'énigme..." aria-describedby="button-enigma-input" v-model="enigmaInput" 
                   @keyup.enter="displayEnigma()" :disabled="!completedEnigmasId.includes(enigmaToDisplay)">
               <button class="btn btn-secondary bi bi-search" type="button" id="button-enigma-input"
                   @click="displayEnigma()" :disabled="!completedEnigmasId.includes(enigmaToDisplay)"></button>
@@ -71,7 +71,7 @@ export default {
       enigmaToDisplay:'v7zo6',
       nbFailure: 0,
       enigmas: enigmasData.enigmas,
-      enigmaInput : 'v7zo6',
+      enigmaInput : '',
       teamName : "",
       startTime : "",
       endTime : ""
