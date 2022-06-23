@@ -106,6 +106,9 @@ export default {
         this.completedEnigmasId.push(enigma.id)
         this.$cookies.set("completedEnigmasId", JSON.stringify(this.completedEnigmasId))
       }
+      if(this.completedEnigmasId.length == 10) {
+        this.stop()
+      }
     },
     loadCookies() {
       var nbFailureCookie = this.$cookies.get("nbFailure")
@@ -120,6 +123,10 @@ export default {
       if(startTimeCookie != null) {
         this.startTime = startTimeCookie
       }
+      var endTimeCookie = this.$cookies.get("endTime")
+      if(endTimeCookie != null) {
+        this.endTime = endTimeCookie
+      }
       var enigmaToDisplayCookie = this.$cookies.get("enigmaToDisplay")
       if(enigmaToDisplayCookie != null) {
         this.enigmaToDisplay = enigmaToDisplayCookie
@@ -132,10 +139,13 @@ export default {
     },
     start(teamName){
       this.teamName = teamName
-      var today = new Date()
-      this.startTime = today.toLocaleTimeString('en-FR')
-      this.$cookies.set("startTime",this.startTime )
-      this.$cookies.set("teamName",this.teamName )
+      this.startTime = new Date()
+      this.$cookies.set("startTime",this.startTime)
+      this.$cookies.set("teamName",this.teamName)
+    },
+    stop(){
+      this.endTime = new Date()
+      this.$cookies.set("endTime",this.endTime)
     },
   },
   components : {
