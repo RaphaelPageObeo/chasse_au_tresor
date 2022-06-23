@@ -29,7 +29,11 @@
     <div v-if="enigma.type == 'select'"  >
         <button class="btn btn-secondary" @click="validateAnswer" :disabled="solved">Valider</button>
     </div>
-    <p class="fw-bold">{{msg}}</p> 
+    <p class="fw-bold">{{msg}}</p>
+     <div v-if="this.solved">
+        <h2 class="d-flex justify-content-center">Où trouver le prochain code?</h2>
+        <p v-html="enigma.clue"></p>
+     </div>
 </template>
 <script>
 export default {

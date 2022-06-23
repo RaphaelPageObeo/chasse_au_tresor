@@ -1,7 +1,19 @@
 { "enigmas" : 
     [
         {
+            "id" : "v7zo6",
+            "clue" : "CLUE PLACEHOLDER",
+            "order" : 0,
+            "type" : "text",
+            "title": "Enigme 1 : Oeufs de Poules", 
+            "text" : "Huit cents poules pondent en moyenne huit cents oeufs en huit jours.",
+            "prefix" : "Combien d'oeufs pondent quatre cents poules en quatre jours? (en chiffres) ",
+            "answer" : "200",
+            "answerText" : "Bonne réponse! En effet, quatre cents poules pondent quatre cents oeufs en huit jours. Donc quatre cents poules pondent deux cents oeufs en quatre jours."
+        },  
+        {
             "id" : "kly4t",
+            "clue" : "CLUE PLACEHOLDER",
             "order" : 1,
             "type" : "select",
             "title":"Enigme 2 : Lien de Parenté", 
@@ -41,28 +53,19 @@
             "answerText" : "Bonne réponse! Le père de mon fils = moi. Donc la phrase devient : ' Si le fils de cet homme c'est moi, quel est le lien de parenté entre cet homme et moi? '."
         },
         {
-            "id" : "bseha",
-            "order" : 7,
-            "type" : "text",
-            "title":"Enigme 8 : Suite Logique", 
-            "text" : "Quelle est la prochaine lettre de cette suite logique : ",
-            "prefix" : "U D T Q C S S ...",
-            "answer" : "h",
-            "answerText" : "Bonne réponse! Les termes de cette suite correspondent aux initiales des chiffres : 'Un, Deux, Trois, Quatre, Cinq, Six, Sept ...'"
-        },
-        {
-            "id" : "g0zt2",
-            "order" : 9,
-            "type" : "text",
-            "title":"Enigme 10 : En manque d'air", 
-            "text" : "Écrivez en toute lettre le chiffre manquant tout en conservant la cohérence de la phrase :",
-            "prefix" : "Dans cette phrase, le 'r' est présent ",
-            "suffix" : "fois.",
-            "answer" : "quatre",
-            "answerText" : "Bonne réponse! Trois ne peut pas convenir, car il contient un R. Quatre convient alors."
-        },    
+            "id" : "43k4c",
+            "clue" : "CLUE PLACEHOLDER",
+            "order" : 2,
+            "type" : "image",
+            "title": "Enigme 3 : Lettre en Rébus", 
+            "imgSrc" : "Enigma13.jpg",
+            "prefix" : "Quelle expression se cache derrière ce dessin?",
+            "answer" : "plus de peur que de mal",
+            "answerText" : "Bonne réponse!"
+        },     
         {
             "id" : "er7r5",
+            "clue" : "CLUE PLACEHOLDER",
             "order" : 3,
             "type" : "select",
             "title":"Enigme 4 : Mot de passe", 
@@ -118,27 +121,20 @@
             "answerText" : "Bonne réponse! 'Quatre' correspond au nombre de lettres du chiffre prononcé par le garde."
         },
         {
-            "id" : "v7zo6",
-            "order" : 0,
-            "type" : "text",
-            "title": "Enigme 1 : Oeufs de Poules", 
-            "text" : "Huit cents poules pondent en moyenne huit cents oeufs en huit jours.",
-            "prefix" : "Combien d'oeufs pondent quatre cents poules en quatre jours? (en chiffres) ",
-            "answer" : "200",
-            "answerText" : "Bonne réponse! En effet, quatre cents poules pondent quatre cents oeufs en huit jours. Donc quatre cents poules pondent deux cents oeufs en quatre jours."
-        },  
-        {
-            "id" : "43k4c",
-            "order" : 2,
+            "id" : "gh6jz",
+            "clue" : "CLUE PLACEHOLDER",
+            "order" : 4,
             "type" : "image",
-            "title": "Enigme 3 : Lettre en Rébus", 
-            "imgSrc" : "Enigma13.jpg",
-            "prefix" : "Quelle expression se cache derrière ce dessin?",
-            "answer" : "plus de peur que de mal",
-            "answerText" : "Bonne réponse!"
+            "title": "Enigme 5 : Cour d'honneur", 
+            "imgSrc" : "Enigma750.jpg",
+            "text" : "Cette figure représente le pavage d'une cour d'honneur.",
+            "prefix" : "Combien comporte-t-elle de carrés au total? (en chiffre)",
+            "answer" : "30",
+            "answerText" : "Bonne réponse! Seize de taille 1x1 ; neuf de taille 2x2 ; quatre de taille 3x3 ; un de taille 4x4"
         }, 
         {
             "id" : "ftbx9",
+            "clue" : "CLUE PLACEHOLDER",
             "order" : 5,
             "type" : "select",
             "title": "Enigme 6 : Quel jour?", 
@@ -176,9 +172,10 @@
             ],
             "answer" : "dimanche",
             "answerText" : "Bonne réponse!"
-        },  
+        }, 
         {
             "id" : "7gamf",
+            "clue" : "CLUE PLACEHOLDER",
             "order" : 6,
             "type" : "image",
             "title": "Enigme 7 : Lettre en Rébus 2", 
@@ -188,18 +185,19 @@
             "answerText" : "Bonne réponse!"
         }, 
         {
-            "id" : "gh6jz",
-            "order" : 4,
-            "type" : "image",
-            "title": "Enigme 5 : Cour d'honneur", 
-            "imgSrc" : "Enigma750.jpg",
-            "text" : "Cette figure représente le pavage d'une cour d'honneur.",
-            "prefix" : "Combien comporte-t-elle de carrés au total? (en chiffre)",
-            "answer" : "30",
-            "answerText" : "Bonne réponse! Seize de taille 1x1 ; neuf de taille 2x2 ; quatre de taille 3x3 ; un de taille 4x4"
-        }, 
+            "id" : "bseha",
+            "clue" : "CLUE PLACEHOLDER",
+            "order" : 7,
+            "type" : "text",
+            "title":"Enigme 8 : Suite Logique", 
+            "text" : "Quelle est la prochaine lettre de cette suite logique : ",
+            "prefix" : "U D T Q C S S ...",
+            "answer" : "h",
+            "answerText" : "Bonne réponse! Les termes de cette suite correspondent aux initiales des chiffres : 'Un, Deux, Trois, Quatre, Cinq, Six, Sept ...'"
+        },
         {
             "id" : "jjk6s",
+            "clue" : "CLUE PLACEHOLDER",
             "order" : 8,
             "type" : "text",
             "title": "Enigme 9 : Escargot grimpeur", 
@@ -207,6 +205,18 @@
             "prefix" : "S'il commence son ascension un matin, combien de jours lui faudra-t-il pour accéder au sommet de ce mur? (en chiffres)",
             "answer" : "8",
             "answerText" : "Bonne réponse!"
-        } 
+        } ,
+        {
+            "id" : "g0zt2",            
+            "clue" : "Félicitations, vous avez résolu la dernière énigme et le chronomètre est arrêté ! <br> Afin de valider votre participation et rentrer dans le podium, suivez les étapes suivantes : <br> 1) Ouvrez le menu de statistiques en appuyant sur le bouton en haut à droite de l'écran <br> 2) Prenez une capture d'écran montrant ce menu <br> 3) Créez un dossier portant le nom de votre équipe dans le drive accessible <a href='https://bit.ly/3Nl8IVc' target='_blank' rel='noopener noreferrer'>ici</a> <br> 4) Transférez la capture d'écran prise précédemment dans ce nouveau dossier <br> 5) Vous souhaitez effacer cinq de vos pénalités ? Prenez un selfie avec Margaux et Loréna et transférez-la dans votre dossier sur le drive ! <br> Les résultats seront annoncés dimanche midi <br> Merci beaucoup d'avoir joué, j'éspère que vous vous êtes bien amusés !",
+            "order" : 9,
+            "type" : "text",
+            "title":"Enigme 10 : En manque d'air", 
+            "text" : "Écrivez en toute lettre le chiffre manquant tout en conservant la cohérence de la phrase :",
+            "prefix" : "Dans cette phrase, le 'r' est présent ",
+            "suffix" : "fois.",
+            "answer" : "quatre",
+            "answerText" : "Bonne réponse! Trois ne peut pas convenir, car il contient un R. Quatre convient alors."
+        }
     ]
 }

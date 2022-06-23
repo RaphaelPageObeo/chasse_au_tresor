@@ -20,8 +20,8 @@
         </div>
         <div class ="row">
           <div class="col">
-            <div v-if="completedEnigmasId.length!=0" class="input-group mb-3  mt-3">
-              <input type="text" class="form-control" placeholder="Numéro de l'énigme..." 
+            <div v-if="completedEnigmasId.length!=0 && completedEnigmasId.length < this.maxEnigma" class="input-group mb-3  mt-3">
+              <input type="text" class="form-control" placeholder="Code de l'énigme..." 
                   aria-label="Code de l'énigme..." aria-describedby="button-enigma-input" v-model="enigmaInput" 
                   @keyup.enter="displayEnigma()" :disabled="!completedEnigmasId.includes(enigmaToDisplay)">
               <button class="btn btn-secondary bi bi-search" type="button" id="button-enigma-input"
@@ -74,7 +74,8 @@ export default {
       enigmaInput : '',
       teamName : "",
       startTime : "",
-      endTime : ""
+      endTime : "",
+      maxEnigma : 10
     }
   },
   mounted() {
@@ -106,7 +107,7 @@ export default {
         this.completedEnigmasId.push(enigma.id)
         this.$cookies.set("completedEnigmasId", JSON.stringify(this.completedEnigmasId))
       }
-      if(this.completedEnigmasId.length == 10) {
+      if(this.completedEnigmasId.length == this.maxEnigma) {
         this.stop()
       }
     },
