@@ -18,24 +18,6 @@
             </div>
           </div>
         </div>
-        <div class ="row">
-          <div class="col">
-            <div v-if="completedEnigmasId.length!=0 && completedEnigmasId.length < this.maxEnigma" class="input-group mb-3  mt-3">
-              <input type="text" class="form-control" placeholder="Code de l'énigme..." 
-                  aria-label="Code de l'énigme..." aria-describedby="button-enigma-input" v-model="enigmaInput" 
-                  @keyup.enter="displayEnigma()" :disabled="!completedEnigmasId.includes(enigmaToDisplay)">
-              <button class="btn btn-secondary bi bi-search" type="button" id="button-enigma-input"
-                  @click="displayEnigma()" :disabled="!completedEnigmasId.includes(enigmaToDisplay)"></button>
-            </div>
-          </div>
-        </div>
-        <div class ="row">
-          <div class="col">
-            <div v-if="msg != '' ">
-              <h2 class="d-flex justify-content-center text-center">{{msg}}</h2>
-            </div>
-          </div>
-        </div>
         <div class="row">
           <div class="col">
             <div v-for="enigma in enigmas" :key="enigma.id">
@@ -49,6 +31,24 @@
                   />
                 </div>
               </div>
+            </div>
+          </div>
+        </div>
+        <div class ="row">
+          <div class="col">
+            <div v-if="completedEnigmasId.length!=0 && completedEnigmasId.length < this.maxEnigma && completedEnigmasId.includes(enigmaToDisplay)" class="input-group mb-3  mt-3">
+              <input type="text" class="form-control" placeholder="Code de l'énigme..." 
+                  aria-label="Code de l'énigme..." aria-describedby="button-enigma-input" v-model="enigmaInput" 
+                  @keyup.enter="displayEnigma()">
+              <button class="btn btn-secondary bi bi-search" type="button" id="button-enigma-input"
+                  @click="displayEnigma()"></button>
+            </div>
+          </div>
+        </div>
+        <div class ="row">
+          <div class="col">
+            <div v-if="msg != '' ">
+              <h2 class="d-flex justify-content-center text-center">{{msg}}</h2>
             </div>
           </div>
         </div>
@@ -83,12 +83,14 @@ export default {
   },
   methods:{
     displayEnigma(){
+      var input = this.enigmaInput.trim().toLowerCase()
       const enigma = this.enigmas
-        .find(enigma => enigma.id == this.enigmaInput)
+        .find(enigma => enigma.id == input)
 
       if(enigma != undefined) {
         if(this.completedEnigmasId.length >= enigma.order){
-          this.enigmaToDisplay = this.enigmaInput
+          this.enigmaToDisplay = input
+          this.enigmaInput = ''
           this.msg = ''
           this.$cookies.set("enigmaToDisplay",this.enigmaToDisplay)
         } else {
