@@ -7,7 +7,7 @@
       :teamName="teamName"
       :endTime="endTime"
     ></Header>
-    <div class="row app-background-style d-flex flex-column v-100">
+    <div class="row app-background-style d-flex flex-column vh-100">
       <div class="col">
         <div class ="row">
           <div class="col">

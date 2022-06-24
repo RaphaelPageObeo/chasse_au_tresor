@@ -2,7 +2,7 @@
     [
         {
             "id" : "v7zo6",
-            "clue" : "CLUE PLACEHOLDER",
+            "clue" : "Pour trouver le code de la prochaine énigme, regardez sous l'extrémité du banc la plus proche de l'ogre qui vous a salué en arrivant.",
             "order" : 0,
             "type" : "text",
             "title": "Enigme 1 : Oeufs de Poules", 
@@ -13,7 +13,7 @@
         },  
         {
             "id" : "kly4t",
-            "clue" : "CLUE PLACEHOLDER",
+            "clue" : "Pour trouver le code de la prochaine énigme, trouvez la femme au sein nu de la salle des canap'. Elle vous indiquera le tiroir dans lequel il se trouve.",
             "order" : 1,
             "type" : "select",
             "title":"Enigme 2 : Lien de Parenté", 
@@ -54,7 +54,7 @@
         },
         {
             "id" : "43k4c",
-            "clue" : "CLUE PLACEHOLDER",
+            "clue" : "Pour trouver le code de la prochaine énigme, regardez dans le porte-prospectus de la salle au photomaton. Les meilleurs voeux du moulin de Nicollin pourraient vous porter chance.",
             "order" : 2,
             "type" : "image",
             "title": "Enigme 3 : Lettre en Rébus", 
@@ -65,7 +65,7 @@
         },     
         {
             "id" : "er7r5",
-            "clue" : "CLUE PLACEHOLDER",
+            "clue" : "Pour trouver le code de la prochaine énigme, mettez donc la tête dans la cheminée de la salle aux canap'!",
             "order" : 3,
             "type" : "select",
             "title":"Enigme 4 : Mot de passe", 
@@ -122,7 +122,7 @@
         },
         {
             "id" : "gh6jz",
-            "clue" : "CLUE PLACEHOLDER",
+            "clue" : "Pour trouver le code de la prochaine énigme, regardez derrière le livre sur B.B., le plus en bas à gauche de la bibliothèque de la salle de danse.",
             "order" : 4,
             "type" : "image",
             "title": "Enigme 5 : Cour d'honneur", 
@@ -134,7 +134,7 @@
         }, 
         {
             "id" : "ftbx9",
-            "clue" : "CLUE PLACEHOLDER",
+            "clue" : "Pour trouver le code de la prochaine énigme, allez faire la vaisselle dans la salle de plonge. Et fermez donc les portes pour ne pas faire de bruit !",
             "order" : 5,
             "type" : "select",
             "title": "Enigme 6 : Quel jour?", 
@@ -175,7 +175,7 @@
         }, 
         {
             "id" : "7gamf",
-            "clue" : "CLUE PLACEHOLDER",
+            "clue" : "Pour trouver le code de la prochaine énigme, allez faire la cuisine ! Il vous faudra très certainement utiliser la poêle la plus à gauche.",
             "order" : 6,
             "type" : "image",
             "title": "Enigme 7 : Lettre en Rébus 2", 
@@ -186,7 +186,7 @@
         }, 
         {
             "id" : "bseha",
-            "clue" : "CLUE PLACEHOLDER",
+            "clue" : "Pour trouver le code de la prochaine énigme, faites un tour dans le chapiteau sous l'escalier.",
             "order" : 7,
             "type" : "text",
             "title":"Enigme 8 : Suite Logique", 
@@ -197,7 +197,7 @@
         },
         {
             "id" : "jjk6s",
-            "clue" : "CLUE PLACEHOLDER",
+            "clue" : "Pour trouver le code de la prochaine énigme, regardez dans le meuble turquoise derrière la cloison sur laquelle twerk spider-man.",
             "order" : 8,
             "type" : "text",
             "title": "Enigme 9 : Escargot grimpeur", 
