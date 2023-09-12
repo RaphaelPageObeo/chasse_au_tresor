@@ -12,7 +12,7 @@
       <b>1) Entrez votre nom d'équipe ci-dessus. </b> Une fois validé, le chronomètre se lance.
     </p>
     <p>
-      <b>2) Résolvez l'énigme.</b> Celle-ci vous donnera un indice, qui vous mènera jusqu'à un code, caché quelque part dans le manoir.
+      <b>2) Résolvez l'énigme.</b> Celle-ci vous donnera un indice, qui vous mènera jusqu'à un code, caché quelque part dans la maison.
     </p>
     <p>
       <b>3) Entrez dans l'application le code ainsi trouvé.</b> Une nouvelle énigme s'affiche alors.

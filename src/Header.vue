@@ -8,7 +8,7 @@
                     </div>
                 </div> 
                 <div class="col-10">
-                    <h1 class="d-flex justify-content-center text-center">CHASSE À L'AMUUUR</h1>
+                    <h1 class="d-flex justify-content-center text-center">Garden Genillé Party</h1>
                 </div>
                 <div class="col-1">
                     <div class="d-flex justify-content-end">
@@ -19,7 +19,7 @@
             <div class ="row">
                 <div class = "col">
                     <div class="d-flex justify-content-center">
-                        <img src="./assets/kissKiss.png" class="img-fluid" alt="Bisous Margaux et Loréna">
+                        <img src="./assets/header.png" class="img-fluid" alt="Les hôtes">
                     </div>
                 </div>
             </div>
