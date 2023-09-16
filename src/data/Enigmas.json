@@ -13,7 +13,7 @@
         },  
         {
             "id" : "kly4t",
-            "clue" : "Pour trouver la prochaine énigme, il faut se rapprocher de leur carrosse gris.",
+            "clue" : "Pour trouver la prochaine énigme, il faut perdre quelques degrés.",
             "order" : 1,
             "type" : "select",
             "title":"Enigme 2 : Lien de Parenté", 
