@@ -40,7 +40,7 @@
             "type" : "text",
             "title": "Enigme 4 : Occurrences", 
             "text" : "Le roi Raphaël est distrait, il a oublié le code du coffre dans lequel il range ses plus précieux jeux de plateau.<br>Il va trouver le prince Pulco, son chat, auquel il se souvient d'avoir confié un pense-bête, en cas de besoin. Ce dernier lui remet un parchemin sur lequel on peut lire :<br><i>Pour retrouver le code du coffre, il faut remplacer les blancs de la phrase qui suit par des chiffres, en faisant en sorte que cette phrase reste cohérente (les chiffres insérés étant également pris en compte). Les dix chiffres insérés, dans l'ordre, donneront le code!</i>",
-            "prefix" : "Voici la phase : <br>Dans cette phrase, le nombre d'occurrence de 0 est __, de 1 est __, de 2 est __, de 3 est __, de 4 est __, de 5 est __, de 6 est __, de 7 est __, de 8 est __ et de 9 est __.",
+            "prefix" : "Voici la phase : Dans cette phrase, le nombre d'occurrence de 0 est __, de 1 est __, de 2 est __, de 3 est __, de 4 est __, de 5 est __, de 6 est __, de 7 est __, de 8 est __ et de 9 est __.",
             "answer" : "1732111211",
             "answerText" : "Bonne réponse!"
         },
@@ -52,7 +52,7 @@
             "title": "Enigme 5 : Suite logique", 
             "text" : "Complétez cette suite logique (une seule lettre)",
             "prefix" : "NXSEQX",
-            "answer" : "T",
+            "answer" : "t",
             "answerText" : "Les termes de cette suite correspondent aux lettres finales des chiffres uN deuX troiS quatrE cinQ siX sepT"
         }, 
         {
@@ -85,7 +85,7 @@
             "title":"Enigme 8 : Charade d'ivrogne", 
             "text" : "Mon premier est un délit.<br>Mon deuxième est du riz.<br>Mon troisième est un homme très mince.",
             "prefix" : "Mon tout menace l'ivrogne s'il arrête de boire...",
-            "answer" : "Delirium Tremens",
+            "answer" : "delirium tremens",
             "answerText" : "Bonne réponse!"
         },
         {
