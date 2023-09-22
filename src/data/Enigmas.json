@@ -24,7 +24,7 @@
         },
         {
             "id" : "43k4c",
-            "clue" : "Pour trouver la prochaine énigme, il faut se rapprocher de l'arbre fruitier qui ne sent pas bon",
+            "clue" : "Pour trouver la prochaine énigme, jetez un coup d'oeil derrière notre plus grand écran",
             "order" : 2,
             "type" : "text",
             "title": "Enigme 3 : Tournoi", 
@@ -35,7 +35,7 @@
         },     
         {
             "id" : "er7r5",
-            "clue" : "Pour trouver la prochaine énigme, regardez là où de nombreux litres de vins ont été préssés",
+            "clue" : "Pour trouver la prochaine énigme, soulevez mon jeu de plateau préféré (il est léger)",
             "order" : 3,
             "type" : "text",
             "title": "Enigme 4 : Occurrences", 
@@ -46,7 +46,7 @@
         },
         {
             "id" : "gh6jz",
-            "clue" : "Pour trouver la prochaine énigme, allez voir sur côté du camping, près de la tente Quechua bleue",
+            "clue" : "Pour trouver la prochaine énigme, regardez derrière la porte menant à la seule pièce ayant conservé son sol d'origine",
             "order" : 4,
             "type" : "text",
             "title": "Enigme 5 : Suite logique", 
@@ -57,7 +57,7 @@
         }, 
         {
             "id" : "ftbx9",
-            "clue" : "Pour trouver la prochaine énigme, il faut aller voir dans la pièce des latrines",
+            "clue" : "Pour trouver la prochaine énigme, il faut ouvrir la plus haute porte de la pièce à la ligne bleue",
             "order" : 5,
             "type" : "image",
             "title": "Enigme 6 : Lettre en Rébus 2", 
@@ -68,7 +68,7 @@
         }, 
         {
             "id" : "7gamf",
-            "clue" : "Pour trouver la prochaine énigme, il faut aller à l'endroit où l'on peut faire son meilleur portrait",
+            "clue" : "Pour trouver la prochaine énigme, ouvrez l'un des placards de la cuisine",
             "order" : 6,
             "type" : "text",
             "title": "Enigme 7 : Blessure", 
@@ -79,7 +79,7 @@
         }, 
         {
             "id" : "bseha",
-            "clue" : "Pour trouver la prochaine énigme, il faut aller voir du côté de l'arbre où il est agréable de se reposer à l'ombre",
+            "clue" : "Le prochain code sent très fort les pieds",
             "order" : 7,
             "type" : "text",
             "title":"Enigme 8 : Charade d'ivrogne", 
@@ -90,7 +90,7 @@
         },
         {
             "id" : "jjk6s",
-            "clue" : "Pour trouver la prochaine énigme, il suffit de se rapprocher d'un jeu en bois",
+            "clue" : "Pour trouver la dernière énigme, il faudra s'assoir sur le trône et ouvrir la porte à votre gauche!",
             "order" : 8,
             "type" : "text",
             "title": "Enigme 9 : Muletier", 
