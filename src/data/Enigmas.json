@@ -9,7 +9,7 @@
             "text" : "Dans les jardins de la résidence, 3 chats attrapent 3 souris en 3 minutes.",
             "prefix" : "Combien faudrait-il de chats pour attraper 100 souris en 100 minutes? (en chiffres) ",
             "answer" : "3",
-            "answerText" : "Les mêmes trois chats!<br>Si les chats prennent en moyenne une souris à la minutes, en cent minutes ils attraperont cent souris."
+            "answerText" : "Les mêmes trois chats! Si les chats prennent en moyenne une souris à la minutes, en cent minutes ils attraperont cent souris."
         },  
         {
             "id" : "kly4t",
