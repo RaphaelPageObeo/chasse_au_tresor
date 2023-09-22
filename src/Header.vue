@@ -8,7 +8,7 @@
                     </div>
                 </div> 
                 <div class="col-10">
-                    <h1 class="d-flex justify-content-center text-center">Garden Genillé Party</h1>
+                    <h1 class="d-flex justify-content-center text-center">Crémaillère du chateau Pulco</h1>
                 </div>
                 <div class="col-1">
                     <div class="d-flex justify-content-end">

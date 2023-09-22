@@ -9,8 +9,8 @@
                 <div class="modal-body">
                     <p>Bloqués sur une énigme? Une question?</p>
                     <p>Appellez le :<br>
-                    <b>06 29 86 48 50</b></p>
-                    <p>Ou demandez <b>Loréna Plos</b></p>
+                    <b>07 77 26 93 61</b></p>
+                    <p>Ou demandez <b>Raphaël Pagé</b></p>
                     <div class="d-flex justify-content-center">
                         <img src="./assets/MaitreDuJeu.png" class="img-fluid" alt="Maitre du jeu">
                     </div>
