@@ -18,7 +18,7 @@
       <b>3) Entrez dans l'application le code ainsi trouvé.</b> Une nouvelle énigme s'affiche alors.
     </p>
     <p>
-      <b>4) 10 énigmes sont à résoudre.</b> Les trois équipes les plus rapides seront récompensées d'un lot ! Le chronomètre s'arrêtera une fois la dernière énigme résolue. 
+      <b>4) 10 énigmes sont à résoudre.</b>Le chronomètre s'arrêtera une fois la dernière énigme résolue. 
     </p>
     <p>
       <b class="bi bi-exclamation-triangle"> Chaque proposition incorrecte entrainera une pénalité.</b> Chaque pénalité ajoutera 1 minute au temps final.
